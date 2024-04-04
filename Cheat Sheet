@@ -1,0 +1,97 @@
+GVIM
+Raam Kavod
+##############################################################
+GENERAL - 
+gvim -o <filename1> <filename2> - opens horizontal splitted gvim windows with both files
+gvim -O <filename1> <filename2> - opens vertical splitted gvim windows with both files
+##############################################################
+VISUAL MODE - 
+: sort ui - alphabetize all selected text by row.
+##############################################################
+INSERT MODE - 
+Ctrl + n - autocompletion.
+##############################################################
+WINDOW MOTION - 
+:sp <filename> - horizontally splits the current buffer with <filename> buffer.
+:vs <filename> - vertically splits the current buffer with <filename> buffer.
+:q - quits the current splitted buffer
+Ctrl + w + w - moves right(or down) to the next splitted file
+##############################################################
+COMBOS -
+ciw - change a word (part:of;the:word)
+ciW - change the whole word (the:whole;word)
+yiw - yank a word (part:of;the:word)
+yiW - yank the whole word (the:whole;word)
+di( - deletes everything in the parentheses (works for { or [ too)
+yy - yank a line.
+	Example: y2j - yank two lines down from the cursor
+	Example: yf<character> - yanks everything to <character>
+dd - delete line (and copies that line too)
+Example: d2j - delete two lines down from the cursor
+##############################################################
+NORMAL MODE -    command - count - motion
+Example	 -         y	    5	      w  	       -      yank five words
+v - gets into cursor visual mode at the cursor’s location (for copy and paste)
+Shift + v - gets into line visual mode at the cursor’s location (for copy and paste)
+Ctrl + v - multi line tab of Visual mode (Then Shift + i for insert mode, write what you want and then ESC then VIM will autocomplete the rest) 
+x - deletes characters.
+u - undo
+Ctrl + r - redo
+y - copy (yank)
+p - paste (or put)
+* - search for the word the cursor on
+q - recording a macro (i'll add more information in future)
+/ - search Mode - n for next and N for previous
+##########################################################################################
+GOTO Insert mode - 
+i - gets into insert mode at the cursor’s location(left).
+Shift + I - gets into insert mode at the beginning of the line.
+a  - gets into insert mode at the cursor’s location(right).
+Shift + A - gets into insert mode at the end of the cursor’s line.
+o - make a new line under and go to insert mode
+Shift O - make a new line above and go to insert mode
+##########################################################################################
+MOTION -
+h,j,k,l  -    ← ↓ ↑ →
+b, w - word forward and backward
+G - goes to the beginning of the line at the end of the file.
+gg - goes to the beginning of the line at the beginning of the file.
+( - same as gg.
+) - takes to the end of the line in the end of the file.
+Ctrl + U - moves half page up.
+Ctrl + D - moves half page down.
+0 - goes to the beginning of the line.
+$ - goes to the end of the line.
+% - jump between matching pairs of parentheses.
+f <character> - moves forward to the next <character>.
+	after using that- 
+, - forward <character>
+; - backward <character>
+##############################################################
+COMMAND MODE - 
+:so .vimrc - reload .vimrc
+:r <filename> - reads and copies another file to the current buffer.
+:! <linux command> - runs a linux command in vim
+:%s/<what you want to change>/<the change>/g - change content for the whole document (find and replace)
+: <number> - takes you to the <number> line of the file
+:set number - sets line number
+:Explore - exploring file with a navigation tool in VIM
+:mksession <filename>.vim - creates a session of specific splitted buffers of files for a quick opening of this session, with mksession you save a session file in the directory.
+To open the session use - gvim -S <filename>.vim
+##########################################################################################
+BUFFERS -
+:q  - quit buffer
+:q! - quit buffer without saving
+:qa - quit all buffers and close vim
+:qa! - quit all buffers without saving and close vim
+:w - write (save buffer as file)
+:w <filename> - save content in <filename> (might be new file) like “save as”
+:wq - save buffer and quit
+:wq <filename> - save buffer content in <filename> and quit
+:e <filename> - edit a file and adding it to the buffers list
+:enew - add a new empty buffer - if empty, won’t save it (ignore it)
+:b <filename> - opens a buffer you want (like a buffer search)
+:bd - buffer delete
+:bd! - buffer delete without saving
+:bn - buffer next
+:bp - buffer previous
