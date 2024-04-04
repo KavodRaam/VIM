@@ -1,2 +1,2 @@
 # VIM
-VIM content such as .vimrc and cheat sheet for beginners
+Main purpose: backup my .vimrc configuration file and basic cheat sheet for beginners.
